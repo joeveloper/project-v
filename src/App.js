@@ -1,13 +1,16 @@
 import './App.css';
-import Searchbar from './components/Searchbar';
+import SearchBar from './SearchBar';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Project - V</h1>
-      <Searchbar/>
+
+const App = (handleSearch) => {
+  
+  return ( 
+    <div>
+      <h1>PROJECT - V</h1>
+      <SearchBar  />
+
     </div>
-  );
+   );
 }
-
+ 
 export default App;
