@@ -1,18 +1,19 @@
 import { useState } from "react";
 import myData from "./data.json";
+import Results from "./Results";
+
 
 
 const SearchBar = () => {
     const [results, setResults] = useState('')
-    const handleSearch = () => {
-        {myData.map(
-            data => {
-              console.log( 
-                data.id,
-                data.vendor , () => { setResults(handleSearch) }
-              )
-            }
-          ) }
+    const handleSearch = (event) => {
+      {myData.map(data => (
+        <div>
+            <p>{data.id}</p>
+            <p>{data.vendor}</p>
+        </div>
+    ))}
+    console.log(event)
     }
     
     return ( 
