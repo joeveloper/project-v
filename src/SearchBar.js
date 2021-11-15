@@ -4,24 +4,25 @@ import Results from "./Results";
 
 
 
-const SearchBar = () => {
-    const [results, setResults] = useState('')
+const SearchBar = (props) => {
+    const [results, setResults] = useState([]);
+    const [searchString, setSetSearchString] = useState('');
+  const searchData = (term) => {
+    const lowerCaseTerm = term.toLowerCase();
+    const result = myData.filter((data) => data.vendor.toLowerCase().includes(lowerCaseTerm));
+    setResults(result);
+  }
     const handleSearch = (event) => {
-      {myData.map(data => (
-        <div>
-            <p>{data.id}</p>
-            <p>{data.vendor}</p>
-        </div>
-    ))}
-    console.log(event)
+    searchData(searchString)
     }
     
     return ( 
         <div className="searchbar">
-            <input type="text"  className="searchinput"  onChange={(e) => e.target.value}/>
+            <input type="text"  className="searchinput"  onChange={(e) => setSetSearchString(e.target.value)}/>
             <button onClick={ handleSearch }>Search</button>
-            
-        
+          <br />
+          <br />
+          <Results results={results} />
         </div>
      );
 }
