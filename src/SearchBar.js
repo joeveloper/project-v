@@ -6,7 +6,7 @@ import Results from "./Results";
 
 const SearchBar = (props) => {
     const [results, setResults] = useState([]);
-    const [searchString, setSetSearchString] = useState('');
+    const [searchString, setSearchString] = useState('');
   const searchData = (term) => {
     const lowerCaseTerm = term.toLowerCase();
     const result = myData.filter((data) => data.vendor.toLowerCase().includes(lowerCaseTerm));
@@ -18,7 +18,7 @@ const SearchBar = (props) => {
     
     return ( 
         <div className="searchbar">
-            <input type="text"  className="searchinput"  onChange={(e) => setSetSearchString(e.target.value)}/>
+            <input type="text"  className="searchinput"  onChange={(e) => setSearchString(e.target.value)}/>
             <button onClick={ handleSearch }>Search</button>
           <br />
           <br />
