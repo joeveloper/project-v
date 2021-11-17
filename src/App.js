@@ -1,8 +1,7 @@
 import './App.css';
 import Results from './Results';
 import SearchBar from './SearchBar';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import myData from './data.json'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import NotFound from './NotFound';
 import Home from './Home';
@@ -12,19 +11,22 @@ import Create from './Create';
 const App = (handleSearch) => {
   
   return ( 
+    <BrowserRouter>
       <div className="App">
       <Navbar/>
       <div className= "content">
         <Routes>
-          <Route exact path="/">
-            <Home/>
+          <Route exact path="/" element={<Home />}>
+            
           </Route>
-          <Route  path="/Create">
-            <Create/>
+          <Route  path="/create" element={<Create />}>
+            
           </Route>
-        </Routes> 
+        </Routes>
       </div>
     </div>
+    </BrowserRouter>
+      
     
    );
 }

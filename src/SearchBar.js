@@ -1,5 +1,5 @@
 import { useState } from "react";
-import myData from "./data.json";
+import myData from "./Data/data.json";
 import Results from "./Results";
 
 
@@ -7,9 +7,11 @@ import Results from "./Results";
 const SearchBar = (props) => {
     const [results, setResults] = useState([]);
     const [searchString, setSearchString] = useState('');
+
+
   const searchData = (term) => {
     const lowerCaseTerm = term.toLowerCase();
-    const result = myData.filter((data) => data.vendor.toLowerCase().includes(lowerCaseTerm));
+    const result = myData.filter((data) => data.businessName.toLowerCase().includes(lowerCaseTerm));
     setResults(result);
   }
     const handleSearch = (event) => {
@@ -19,7 +21,7 @@ const SearchBar = (props) => {
     return ( 
         <div className="searchbar">
             <input type="text"  className="searchinput"  onChange={(e) => setSearchString(e.target.value)}/>
-            <button onClick={ handleSearch }>Search</button>
+            <button onClick={handleSearch }>Search</button>
           <br />
           <br />
           <Results results={results} />

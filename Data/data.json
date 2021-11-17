@@ -1,0 +1,27 @@
+[
+  { "id": 1, 
+      "firstname": "Chinua Achebe",
+      "lastname": "Nigeria",
+      "instagram": "images/things-fall-apart.jpg",
+      "businessName": "English",
+      "businessDetails": "",
+      "date": ""
+    },
+    { "id": 2, 
+      "firstname": "Chinua Achebe",
+      "lastname": "Nigeria",
+      "instagram": "images/things-fall-apart.jpg",
+      "businessName": "English",
+      "businessDetails": "",
+      "date": ""
+    },
+    {
+      "id": 3, 
+      "firstname": "Chinua Achebe",
+      "lastname": "Nigeria",
+      "instagram": "images/things-fall-apart.jpg",
+      "businessName": "English",
+      "businessDetails": "",
+      "date": ""
+    }
+]
