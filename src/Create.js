@@ -58,12 +58,8 @@ const Create = () => {
                 onChange={(event) => setBusinessdetails(event.target.value)}
                 required 
                 />
-                <button>Submit</button>
-                
-                
-                
-            </form>
-            
+                <button>Submit</button>  
+            </form>   
         </div>
      );
 }
